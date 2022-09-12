@@ -1,0 +1,91 @@
+
+Project: Calc 
+--
+  Source Doc: FRD
+
+
+  Requirements
+    Design 
+      Development 
+        Testing  
+          Deployment 
+            Maintanance 
+
+
+Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (QA PASSED) => Deployment 
+
+Feature: Add
+---
+  Source: FRD 
+  Prepare Test Cases
+  --
+    1. Inputs should be of numbers 
+    2. Output should also be number 
+    3. if wrong inputs entered add button should be disabled 
+
+  Developers
+  --
+    function add(a, b){
+      if(typeof a === 'number' && typeof b === 'number'){
+        return a + b;
+      }else{
+        return 'wrong inputs';
+      }
+    }
+
+    add(10, 20); // 20
+
+  [Tools]
+
+--
+Automated Testing 
+---
+  4 Levels of Testing 
+  --
+    0. Static Type Checking 
+        Tools: TypeScript / FlowJS / PropTypes
+
+    1. Unit Testing (TO LEARN)
+        Testing tiny independent unit of a comp is unit testing 
+        Tools: JEST + React Testing Library  (or) JEST + EnzymeJS 
+
+    2. Integration Testing 
+        Testing integrated codes with REST API's output 
+        Tools: JEST + React Testing Library  (or) JEST + EnzymeJS 
+
+    3. End 2 End Testing (E2E)
+        Testing the whole app 
+        Tools: CypressJS, Protractor, Selenium 
+
+
+  2 Testing Approaches 
+  ---
+    1. Test Driven Development (TDD)  -- (TO LEARN )
+        * write NEW CODE only if an automated test fails 
+
+        Dev Writes Test cases => (failure) => Dev Writes fn code => (success) => [CODE COMPLETE]
+        
+        Testing Pattern: AAA (Arrange, Act, Assert)
+        Tools: Jest (Testing Framework + Test Runner )
+
+
+    2. Behaviour Driven Developement (BDD)
+        * practice encourages the devs to write test cases around the behaviour the end user wants to exp
+
+        * Write test cases around the behaviour => (failure) => Dev Writes fn code => (success) => [CODE COMPLETE]
+        
+        Testing Pattern: Given, When, Then
+        Tools: Jasmine JS  (Testing Framework )
+
+
+  Tools
+  ---
+    JEST = Testing Framework + Test Runner 
+    React Testing Library = like DOM Querying tool 
+    EnzymeJS  = like DOM Querying tool similar to jQuery 
+
+
+
+---
+
+    
