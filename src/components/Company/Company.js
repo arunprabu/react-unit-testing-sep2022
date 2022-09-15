@@ -2,13 +2,11 @@ import React, { useState } from 'react'
 
 const Company = ( {name} ) => {
 
-  console.log('Program Started');
-
   const [country, setCountry] = useState('Canada');
 
   const handleCountryChange = (event) => {
-    console.log(event); // event obj 
-    console.log(event.target.value);
+    // console.log(event); // event obj 
+    // console.log(event.target.value);
     setCountry(event.target.value);
   }
 
@@ -16,7 +14,7 @@ const Company = ( {name} ) => {
     <div>
       <h2>Company | Testing Props, Event, States, Hooks, JSX, CSS styles and Snapshot</h2>
       <h3 data-testid="companyNameEl">
-        Cognizant's Official Website
+        Cognizant's Official Website!
       </h3>
 
       <h4>
@@ -32,6 +30,11 @@ const Company = ( {name} ) => {
         placeholder="Enter Country"/>
       <p>Head over to Cognizant {country} website!</p>
 
+
+      <br/>
+      <div data-testid='successNotification' style={{ backgroundColor: '#00ff00', padding: '20px', color: '#000' }}>
+        Success! Data Saved!!
+      </div>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 // Arrange
 import { fireEvent, render, screen } from "@testing-library/react";
+import renderer from 'react-test-renderer';
 import Company from "./Company";
 
 // TEST SUITE
@@ -11,7 +12,7 @@ describe('CompanyComponent', () => {
     const companyNamEl = screen.getByTestId('companyNameEl');
 
     expect(companyNamEl.textContent)
-      .toBe(`Cognizant's Official Website`);
+      .toBe(`Cognizant's Official Website!`);
   });
 
   // test spec #2 -- let's test the props
@@ -44,6 +45,7 @@ describe('CompanyComponent', () => {
       }
     });
     expect(countryInput.value).toBe('Australia');
+    expect(screen.getByText('Head over to Cognizant Australia website!')).toBeInTheDocument();
 
     fireEvent.change(countryInput, {
       target: {
@@ -51,7 +53,27 @@ describe('CompanyComponent', () => {
       }
     });
     expect(countryInput.value).toBe('UK');
+    expect(screen.getByText('Head over to Cognizant UK website!')).toBeInTheDocument();
   });
+
+  // testing inline css 
+  it('has css style with bg color green', () => {
+    render(<Company />);
+    expect(screen.getByTestId('successNotification')).toHaveStyle('background-color: #00ff00' );
+  });
+
+  // TODO: testing element with css class 'btn-danger' 
+
+  // snapshot testing
+  it('should have right company comp snapshot', () => {
+    // npm i react-test-renderer 
+    // we will take a snapshot in json format
+    const snapshotJSON = renderer.create(<Company name='Cognizant Technology Solutions Corporation'/> );
+    // lets assert
+    expect(snapshotJSON).toMatchSnapshot();
+  });
+
+
 
 });
 
