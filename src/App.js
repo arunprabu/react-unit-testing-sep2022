@@ -1,6 +1,7 @@
 import './App.css';
 import Company from './components/Company/Company';
 import Counter from './components/Counter/Counter';
+import Todos from './components/Todos/Todos';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
 
       <hr/>
       <Counter />
+
+      <hr/>
+      <Todos />
     </div>
   );
 }
