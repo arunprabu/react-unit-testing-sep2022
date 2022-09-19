@@ -47,6 +47,7 @@ Automated Testing
 
     1. Unit Testing (TO LEARN)
         Testing tiny independent unit of a comp is unit testing 
+        Testing the component in isolation
         Tools: JEST + React Testing Library  (or) JEST + EnzymeJS 
 
     2. Integration Testing 
@@ -87,5 +88,19 @@ Automated Testing
 
 
 ---
+Todos 
+  REST API Backend using fetch api 
+  Why not render only once?
+
+Posts 
+  Mocking concept 
+
+Testing Class Comp + one more 
+
+Enzyme 
+Codecoverage 
+Package.json optimization for testing 
+
+
 
     
