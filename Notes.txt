@@ -88,11 +88,9 @@ Automated Testing
 
 
 ---
-Todos 
-  REST API Backend using fetch api 
-  Why not render only once?
 
 Posts 
+  Why not render only once?
   Mocking concept 
 
 Testing Class Comp + one more 

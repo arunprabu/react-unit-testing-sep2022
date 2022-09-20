@@ -14,7 +14,6 @@ const Todos = () => {
     const fetchTodos = async() => {
       var res = await fetch(todosApiUrl);
       const resInJSON = await res.json();
-      console.log(resInJSON);
       // updating the todoList array 
       setTodoList(resInJSON);
     }
