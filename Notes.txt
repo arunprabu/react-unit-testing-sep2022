@@ -91,6 +91,20 @@ Automated Testing
 
 
 Enzyme 
+  officially supported till react v 16 
+  unofficially supported in react v 17 
+    Setup guide 
+    --
+    1.  npm install --save-dev @wojtekmaj/enzyme-adapter-react-17 enzyme
+
+    2. in setupTests.js, 
+      
+      import Enzyme from 'enzyme';
+      import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
+      Enzyme.configure({ adapter: new Adapter() });
+
+  
 Codecoverage 
 Package.json optimization for testing 
 
